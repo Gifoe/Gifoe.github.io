@@ -17,7 +17,7 @@ address a{color:inherit}
 address a:hover,address a:focus-visible{color:var(--link)}
 p{margin:20px 0}
 .bio{margin:20px 0}
-.bio,.research p{text-align:justify;hyphens:auto}
+.research p{text-align:justify;hyphens:auto}
 nav{text-align:center;line-height:1.3}
 nav span{margin:0 7px}
 .research,.publications,.news{padding:25px}
@@ -25,7 +25,6 @@ h2{font-size:27.5px;line-height:1.3;font-weight:400;color:var(--heading);margin:
 .research p{margin:20px 0 0}
 .publication{margin-top:20px}
 .publication h3{margin:0;font-size:1em;line-height:inherit}
-.publication--review{margin-top:calc(34px + 1.3em)}
 .news ul{margin:20px 0 0;padding-left:1.25em}
 @media(max-width:760px){
  body{font-size:16px}
