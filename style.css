@@ -7,8 +7,8 @@ a{color:var(--link);text-decoration:none}
 a:hover,a:focus-visible{color:#e37222}
 a:focus-visible{outline:2px solid var(--link);outline-offset:4px}
 .profile{display:grid;grid-template-columns:312.5px minmax(0,1fr);column-gap:17.5px;align-items:center;padding:25px}
-.portrait{display:block}
-.portrait img{display:block;width:312.5px;height:392px;object-fit:cover;object-position:center 30%}
+.portrait{display:block;position:relative;align-self:stretch;min-height:392px}
+.portrait img{display:block;position:absolute;width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .profile-text{min-height:354px;display:flex;flex-direction:column;justify-content:space-between}
 h1{font-family:inherit;font-size:52.5px;font-weight:400;line-height:1.05;margin:0}
 .identity{text-align:center}
@@ -16,26 +16,32 @@ address{font-style:normal;line-height:1.3}
 address a{color:inherit}
 address a:hover,address a:focus-visible{color:var(--link)}
 p{margin:20px 0}
-.bio{margin:20px 0;text-align:left}
+.bio{margin:20px 0}
+.bio,.research p{text-align:justify;hyphens:auto}
 nav{text-align:center;line-height:1.3}
 nav span{margin:0 7px}
-.research{padding:25px}
+.research,.publications,.news{padding:25px}
 h2{font-size:27.5px;line-height:1.3;font-weight:400;color:var(--heading);margin:0}
 .research p{margin:20px 0 0}
+.publication{margin-top:20px}
+.publication h3{margin:0;font-size:1em;line-height:inherit}
+.review-heading{margin:26px 0 0;font-size:1em;font-weight:400;font-style:italic}
+.review-heading+.publication{margin-top:8px}
+.news ul{margin:20px 0 0;padding-left:1.25em}
 @media(max-width:760px){
  body{font-size:16px}
  .profile{grid-template-columns:33% minmax(0,1fr);gap:20px;padding:20px}
- .portrait img{width:100%;height:auto;aspect-ratio:312.5/392}
+ .portrait{min-height:300px}
  .profile-text{min-height:300px}
  h1{font-size:38px}
- .research{padding:25px 20px}
+ .research,.publications,.news{padding:25px 20px}
  h2{font-size:22px}
 }
 @media(max-width:520px){
  .profile{display:flex;flex-direction:column;gap:24px;padding:24px 20px 10px}
- .portrait{width:210px}
+ .portrait{align-self:center;width:210px;min-height:0;aspect-ratio:312.5/392}
  .profile-text{min-height:0}
  .bio{margin:24px 0}
  h1{font-size:38px}
- .research{padding:28px 20px}
+ .research,.publications,.news{padding:28px 20px}
 }
